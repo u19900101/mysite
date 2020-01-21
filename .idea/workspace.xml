@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="添加了mysite.xml">
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +139,7 @@
       <updated>1570931290968</updated>
       <workItem from="1579591751471" duration="1054000" />
       <workItem from="1579593206261" duration="2687000" />
+      <workItem from="1579597716815" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="修复了登录后首页无法正常获取登录状态的bug">
       <created>1579592182918</created>
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579597211781</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加了gitignore文件，准备上传setting.py文件">
+      <created>1579597886318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579597886318</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,13 +218,14 @@
     <MESSAGE value="小修改，去掉买买买" />
     <MESSAGE value="小修改，去掉detail中的买买买" />
     <MESSAGE value="添加了mysite.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了mysite.xml" />
+    <MESSAGE value="添加了gitignore文件，准备上传setting.py文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了gitignore文件，准备上传setting.py文件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2" timestamp="1579597220421">
+    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2" timestamp="1579598293344">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579597220421" />
+    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579598293344" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1579593602037">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -240,10 +250,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="157" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1579597668390" />
-    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1579597229381">
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1579597892074">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1579597229381" />
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1579597892074" />
     <state x="539" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579597377636">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
