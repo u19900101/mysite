@@ -1,5 +1,5 @@
 from django.contrib.contenttypes.models import ContentType
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.core.cache import cache
 from blog.models import Blog
 from read_statistics.utils import get_seven_days_read_data, get_today_hot_data, get_yesterday_hot_data, \
@@ -30,6 +30,7 @@ def home(request):
     content['yesterday_hot_data'] = yesterday_hot_data
     content['blogs'] = blogs
 
-    return render_to_response('home.html', content)
+    #return render_to_response('home.html', content)  #耗费鸟很多时间
+    return render(request, 'home.html', content)
 
 
