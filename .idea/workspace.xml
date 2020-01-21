@@ -162,10 +162,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复了登录后首页无法正常获取登录状态的bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="55" y="0" key="CommitChangelistDialog2" timestamp="1579592561551">
+    <state x="55" y="0" key="CommitChangelistDialog2" timestamp="1579593261743">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="55" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579592561551" />
+    <state x="55" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579593261743" />
     <state width="1483" height="293" key="GridCell.Tab.0.bottom" timestamp="1579592805420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -182,6 +182,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1483" height="293" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579592805420" />
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1579593310076">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1579593310076" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mysite_github$debug.coverage" NAME="debug Coverage Results" MODIFIED="1579593227084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
