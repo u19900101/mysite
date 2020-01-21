@@ -1,21 +1,14 @@
-import random
-import string
-import time
-
-from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.http import JsonResponse
-
-from user.models import Profile
-from .forms import LoginForm, RegForm, ChangeNicknameForm, BindEmailForm, ChangePasswordForm, ForgotPasswordForm
-
+from .forms import LoginForm, RegForm
 
 def login_for_medal(request):
     login_form = LoginForm(request.POST)
     data = {}
+    print("login_for_medal。。。")
     if login_form.is_valid():
         user = login_form.cleaned_data['user']
         auth.login(request, user)
@@ -25,11 +18,13 @@ def login_for_medal(request):
     return JsonResponse(data)
 
 def login(request):
+    print("login。。。。。。")
     if request.method == 'POST':
         login_form = LoginForm(request.POST)
         if login_form.is_valid():
             user = login_form.cleaned_data['user']
             auth.login(request, user)
+            print(user.is_authenticated)
             return redirect(request.GET.get('from', reverse('home')))
     else:
         login_form = LoginForm()
