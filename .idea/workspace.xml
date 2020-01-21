@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="修复了登录后首页无法正常获取登录状态的bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,6 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570931290968</updated>
       <workItem from="1579591751471" duration="1054000" />
+      <workItem from="1579593206261" duration="394000" />
     </task>
     <task id="LOCAL-00001" summary="修复了登录后首页无法正常获取登录状态的bug">
       <created>1579592182918</created>
@@ -140,18 +139,44 @@
       <option name="project" value="LOCAL" />
       <updated>1579592182918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修复了登录后首页无法正常获取登录状态的bug">
+      <created>1579593264572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579593264572</updated>
+    </task>
+    <task id="LOCAL-00003" summary="小修改，去掉买买买">
+      <created>1579593474660</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579593474660</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -159,33 +184,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复了登录后首页无法正常获取登录状态的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了登录后首页无法正常获取登录状态的bug" />
+    <MESSAGE value="小修改，去掉买买买" />
+    <option name="LAST_COMMIT_MESSAGE" value="小修改，去掉买买买" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="55" y="0" key="CommitChangelistDialog2" timestamp="1579593261743">
+    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2" timestamp="1579593472534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="55" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579593261743" />
-    <state width="1483" height="293" key="GridCell.Tab.0.bottom" timestamp="1579592805420">
+    <state x="55" y="0" width="1133" height="864" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1579593472534" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1579593602037">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="293" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1579592805420" />
-    <state width="1483" height="293" key="GridCell.Tab.0.center" timestamp="1579592805420">
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1579593602037" />
+    <state width="1483" height="224" key="GridCell.Tab.0.bottom" timestamp="1579593508765">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="293" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1579592805420" />
-    <state width="1483" height="293" key="GridCell.Tab.0.left" timestamp="1579592805420">
+    <state width="1483" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1579593508765" />
+    <state width="1483" height="224" key="GridCell.Tab.0.center" timestamp="1579593508765">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="293" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1579592805420" />
-    <state width="1483" height="293" key="GridCell.Tab.0.right" timestamp="1579592805420">
+    <state width="1483" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1579593508765" />
+    <state width="1483" height="224" key="GridCell.Tab.0.left" timestamp="1579593508765">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="293" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579592805420" />
-    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1579593310076">
+    <state width="1483" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1579593508765" />
+    <state width="1483" height="224" key="GridCell.Tab.0.right" timestamp="1579593508765">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1579593310076" />
+    <state width="1483" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579593508765" />
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1579593588656">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1579593588656" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mysite_github$debug.coverage" NAME="debug Coverage Results" MODIFIED="1579593227084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
