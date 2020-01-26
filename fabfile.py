@@ -18,17 +18,14 @@ from fabric.api import *
 env.hosts = ['root@118.190.204.172:22']
 env.password = 'Liupan1314'
 
-def startenv(worn_only = True):
+def gitmysite():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
-            run('fuser -k 8997/tcp ')
-            run('fuser -k 80/tcp ')
-            run('python3 /data/wwwroot/mysite/manage.py runserver 0.0.0.0:80')
-        # run('cd /usr/local/nginx/sbin/ ./nginx')
-        # run('cd /data/wwwroot/mysite/ uwsgi -x mysite.xml')
-        # run('cd /usr/local/nginx/sbin/ ./nginx -s reload')
-
-
+            with cd("/data/wwwroot/mysite/"):
+                run('git add .')
+                run('git remote add origin git@github.com:u19900101/mysite.git')
+                run('git commit -m "test" ')
+                run('git push')
 
 def startenv3():
     with settings(warn_only=True):
