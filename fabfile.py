@@ -28,6 +28,7 @@ def gitmysite():
                 run('git fetch --all')
                 run('git reset --hard origin/master')
 
+
 def startenv3():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):

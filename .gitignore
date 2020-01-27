@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+!/media/
+!/mysite/settings.py
+!/mysite.xml
+!/db.sqlite3
+!/data.json
