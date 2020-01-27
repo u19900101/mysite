@@ -31,7 +31,8 @@ def gitmysite():
 def startenv3():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
-            run('git pull')
+            with cd("/data/wwwroot/mysite/"):
+                run('git pull')
             run('fuser -k 8997/tcp ')
             run('fuser -k 80/tcp ')
             with cd("/usr/local/nginx/sbin/"):
