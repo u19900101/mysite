@@ -51,7 +51,7 @@ def startenv4():
 
 
 def deploy():
-    # gitmysite()
+    gitmysite()
     startenv3()
 
 
