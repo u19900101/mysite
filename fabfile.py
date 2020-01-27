@@ -18,7 +18,7 @@ from fabric.api import *
 env.hosts = ['root@118.190.204.172:22']
 env.password = 'Liupan1314'
 
-#测试信息
+#测试信息222222
 
 def gitmysite():
     with settings(warn_only=True):
@@ -51,7 +51,7 @@ def startenv4():
 
 
 def deploy():
-    # startenv()
+    gitmysite()
     startenv3()
 
 
