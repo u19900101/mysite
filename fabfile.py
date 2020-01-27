@@ -18,14 +18,15 @@ from fabric.api import *
 env.hosts = ['root@118.190.204.172:22']
 env.password = 'Liupan1314'
 
+
+
 def gitmysite():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
-                run('git add .')
-                run('git remote add origin git@github.com:u19900101/mysite.git')
-                run('git commit -m "test" ')
-                run('git push')
+                run('git config --global credential.helper store')
+                run('git fetch --all')
+                run('git reset --hard origin/master')
 
 def startenv3():
     with settings(warn_only=True):
@@ -52,6 +53,8 @@ def startenv4():
 def deploy():
     # startenv()
     startenv3()
+
+
 
 # @runs_once           # 主机遍历过程中，只有第一台触发此函数
 # def input_raw():
