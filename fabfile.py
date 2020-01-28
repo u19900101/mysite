@@ -1,17 +1,3 @@
-def hello():
-    print("Hello world!")
-from fabric.api import local
-def test():
-    local('python manage.py test mysite')
-# 测试是否能正常运行
-def commit():
-    local('git add -p && git commit -m "for test"')
-def push():
-    local('git push')
-def prepare_deploy():
-    test()
-    commit()
-    push()
 ####################################################################
 from fabric.api import *
 
@@ -24,7 +10,6 @@ def gitpull():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
-                # run('git merge')
                 run('git pull')
 
 def gitpush():
@@ -39,8 +24,6 @@ def gitpush():
 def startenv3():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
-            # with cd("/data/wwwroot/mysite/"):
-            #     run('git pull')
             run('fuser -k 8997/tcp ')
             run('fuser -k 80/tcp ')
             with cd("/usr/local/nginx/sbin/"):
@@ -50,9 +33,9 @@ def startenv3():
             with cd("/usr/local/nginx/sbin/"):
                 run("./nginx -s reload")
 def deploy():
-    # gitpull()
+    gitpull()
     gitpush()
-    # startenv3()
+    startenv3()
 
 def startenv4():
     with settings(warn_only=True):
