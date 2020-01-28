@@ -31,6 +31,7 @@ def gitpush():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
+                run('rm -rf .gitignore')
                 run('git add .')
                 run('git commit -m "服务器的upload修改"')
                 run('git push')
