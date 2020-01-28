@@ -20,13 +20,12 @@ env.password = 'Liupan1314'
 
 #测试信息222222
 
-def gitmysite():
+def gitpull():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
-                run('git config --global credential.helper store')
-                run('git fetch --all')
-                run('git reset --hard origin/master')
+                run
+                run('git pull')
 
 def gitpush():
     with settings(warn_only=True):
@@ -39,8 +38,8 @@ def gitpush():
 def startenv3():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
-            with cd("/data/wwwroot/mysite/"):
-                run('git pull')
+            # with cd("/data/wwwroot/mysite/"):
+            #     run('git pull')
             run('fuser -k 8997/tcp ')
             run('fuser -k 80/tcp ')
             with cd("/usr/local/nginx/sbin/"):
@@ -49,22 +48,15 @@ def startenv3():
                 run("uwsgi -x mysite.xml")
             with cd("/usr/local/nginx/sbin/"):
                 run("./nginx -s reload")
+def deploy():
+    gitpush()
+    startenv3()
 
 def startenv4():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
                 run('python manage.py collectstatic')
-
-
-
-
-
-def deploy():
-    gitmysite()
-    startenv3()
-
-
 
 # @runs_once           # 主机遍历过程中，只有第一台触发此函数
 # def input_raw():
