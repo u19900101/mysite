@@ -24,7 +24,7 @@ def gitpull():
     with settings(warn_only=True):
         with prefix('. /data/env/pyweb/bin/activate'):
             with cd("/data/wwwroot/mysite/"):
-                run('git merge')
+                # run('git merge')
                 run('git pull')
 
 def gitpush():
@@ -49,9 +49,9 @@ def startenv3():
             with cd("/usr/local/nginx/sbin/"):
                 run("./nginx -s reload")
 def deploy():
-    gitpull()
+    # gitpull()
     gitpush()
-    startenv3()
+    # startenv3()
 
 def startenv4():
     with settings(warn_only=True):
