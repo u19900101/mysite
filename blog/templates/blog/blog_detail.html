@@ -25,12 +25,37 @@
                     <li>阅读({{ blog.read_num }})</li>
                     <li>评论({% get_comment_count blog %})</li>
                 </ul>
-                <div class="blog-content">{{ blog.content|safe }}</div>
+
+<!--        用来检测图片中人脸的数量      -->
+<!--                <div>-->
+<!--                    <input type="file" name="images" class="file_cse">-->
+<!--                    <img alt="上传照片" src="/media/upload/2020/08/21/7_3Xd993i.jpg" style="height:562px; width:500px" />-->
+<!--                </div>-->
+
+                    <form id="get_face" action="{% url 'get_face' %}" method="POST" style="overflow:hidden" enctype ="multipart/form-data">
+                        {% csrf_token %}
+                          <input type="file" name="images" class="file_cse">
+                        <input type="submit" value="检测" name="images" class="btn btn-primary pull-left">
+                    </form>
+
+<!--                <div class="blog-content" id ="M">-->
+<!--                    {{ blog.content|safe }}-->
+<!--                </div>-->
+<!--可以通过这种方式由前段向后端进行传参-->
+<!--                 <form action="{% url 'get_face' %}" method="post">-->
+<!--                    {% csrf_token %}-->
+<!--                    <input type="text" name="q">-->
+<!--                    <input type="submit" value="Submit">-->
+<!--                </form>-->
+
                 <div class="like" onclick="likeChange(this, '{% get_content_type blog %}', {{ blog.pk }})">
                     <span class="glyphicon glyphicon-thumbs-up {% get_like_status blog %}"></span>
                     <span class="liked-num">{% get_like_count blog %}</span>
                     <span>喜欢</span>
                 </div>
+
+
+
                 <div class="blog-more">
                     <p>上一篇：
                         {% if previous_blog %}
@@ -49,6 +74,9 @@
                 </div>
             </div>
         </div>
+
+
+
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
                 <div class="comment-area">

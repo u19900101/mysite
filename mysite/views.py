@@ -1,10 +1,17 @@
+import os
+
 from django.contrib.contenttypes.models import ContentType
-from django.shortcuts import render_to_response
+from django.http import HttpResponse
+from django.shortcuts import render_to_response,render
 from django.core.cache import cache
 from blog.models import Blog
 from read_statistics.utils import get_seven_days_read_data, get_today_hot_data, get_yesterday_hot_data, \
     get_7_days_hot_blogs
 
+
+def index(request):
+    print("进入了index")
+    return render(request, 'test.html')
 
 def home(request):
     content = {}

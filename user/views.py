@@ -2,6 +2,7 @@ import random
 import string
 import time
 
+from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import auth
@@ -24,6 +25,7 @@ def login_for_medal(request):
         data['status'] = 'ERROR'
     return JsonResponse(data)
 
+@csrf_exempt
 def login(request):
     if request.method == 'POST':
         login_form = LoginForm(request.POST)

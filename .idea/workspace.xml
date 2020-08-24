@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mysite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mysite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/upload/2019/10/20/app.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/upload/2019/10/20/app_MOSMM6h.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/user_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="mysite" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -19,51 +64,55 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1S83FIriYmASnPFi4msjsAh7zAm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/upload" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\static\blog" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\templates" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\templates\blog" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\py\My_work\1-19-mysite\upload" />
       <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite" />
       <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\likes" />
       <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\comment\templatetags" />
       <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\templates\blog" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\py\My_work\1-19-mysite\media" />
+      <recent name="D:\py\My_work\1-19-mysite" />
+      <recent name="D:\py\My_work\1-19-mysite\templates" />
+      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\static\blog" />
+      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\templates" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.debug">
+    <configuration name="blog_detail.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/1-19-mysite/blog/templates/blog/blog_detail.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="debug" type="PythonConfigurationType" factoryName="Python">
       <module name="mysite" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
-      <option name="SDK_HOME" value="D:\AI\pyinstall\python.exe" />
+      <option name="SDK_HOME" value="D:\AI\py3-6-64\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -84,10 +133,11 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\AI\py3-6-64\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/blog" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -101,12 +151,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.blog_detail.html" />
       <item itemvalue="Python.debug" />
       <item itemvalue="Python.views" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.views" />
+        <item itemvalue="JavaScript Debug.blog_detail.html" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +172,84 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570931290968</updated>
+      <workItem from="1597978199304" duration="15472000" />
+      <workItem from="1598084083851" duration="2845000" />
+      <workItem from="1598143062098" duration="6249000" />
+      <workItem from="1598151481134" duration="724000" />
+      <workItem from="1598152234721" duration="1521000" />
+      <workItem from="1598161494641" duration="1755000" />
+      <workItem from="1598163914840" duration="7974000" />
+      <workItem from="1598253036250" duration="4067000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598164428566">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1598164428566" />
+    <state width="1475" height="159" key="GridCell.Tab.0.bottom" timestamp="1598258536141">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="159" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598258536141" />
+    <state width="1475" height="159" key="GridCell.Tab.0.center" timestamp="1598258536141">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="159" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598258536141" />
+    <state width="1475" height="159" key="GridCell.Tab.0.left" timestamp="1598258536141">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="159" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598258536141" />
+    <state width="1475" height="159" key="GridCell.Tab.0.right" timestamp="1598258536141">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="159" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598258536141" />
+    <state width="1475" height="326" key="GridCell.Tab.1.bottom" timestamp="1598173873165">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="326" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
+    <state width="1475" height="326" key="GridCell.Tab.1.center" timestamp="1598173873165">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="326" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
+    <state width="1475" height="326" key="GridCell.Tab.1.left" timestamp="1598173873165">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="326" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
+    <state width="1475" height="326" key="GridCell.Tab.1.right" timestamp="1598173873165">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1475" height="326" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
+    <state x="65" y="0" key="SettingsEditor" timestamp="1598156668365">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="65" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598156668365" />
+    <state x="157" y="0" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1598156751085">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="157" y="0" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.864@0.0.1536.864" timestamp="1598156751085" />
+    <state x="0" y="0" width="910" height="864" key="find.popup" timestamp="1598162645510">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="0" width="910" height="864" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1598162645510" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/1_19_mysite$debug.coverage" NAME="debug Coverage Results" MODIFIED="1598258536130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1_19_mysite$views.coverage" NAME="views Coverage Results" MODIFIED="1598164430583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />
   </component>
 </project>

@@ -17,12 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 from mysite import views
-from .views import home
+from .views import home, index
 from django.conf import settings
 from django.conf.urls.static import static
+
 urlpatterns = [
-    path('', home,name="home"),
+    #path('', views.index), #添加这行
+    # path('', home,name="home"),
+    path('', index,name="index"),
     path('admin/', admin.site.urls),
+    path('upload/', include("upload.urls")),
     path('blog/',include("blog.urls")),
     path('ckeditor',include('ckeditor_uploader.urls')),
     path('user/', include('user.urls')),

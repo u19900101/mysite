@@ -45,3 +45,17 @@ def update_comment(request):
         data['status'] = 'ERROR'
         data['message'] = list(comment_form.errors.values())[0][0]
     return JsonResponse(data)
+
+def get_face(request):
+    # referer = request.META.get('HTTP_REFERER', reverse('home'))
+    # comment_form = CommentForm(request.POST, user=request.user)
+    data = {}
+    # # 返回数据
+    # data['face_num'] = 5
+    print(request.FILES)
+    image = request.FILES.get('images')
+    print(image.name)
+    if request.POST:
+        print(request.POST['pic'])
+        # data['blog_content'] = request.POST['blog_content']
+    return JsonResponse(data)
