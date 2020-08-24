@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--    <div >-->
+<!--    <form action="">-->
+<!--      {% csrf_token %}-->
+<!--&lt;!&ndash;    <h3>用户注册</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>用户名：<input type="text" name="userName"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>密码：<input type="password" name="password"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>邮箱：<input type="text" name="email"></p>&ndash;&gt;-->
+<!--      <input id="avatar" type="text" value="/media/upload/2020/08/21/a4.jpg" name="avatar" > {# 实际应用中要将该input标签隐藏，display:none; #}-->
+<!--      <p><input type="submit" value="注册"></p>-->
+<!--      </form>-->
+<!--    <div >-->
+<!--要记得加斜杠-->
+ <form method="post" action="./upload/" enctype="multipart/form-data">
+    {% csrf_token %}
+     <input name= "avatarSlect" id="avatarSlect" type="file" >
+     <input type="submit" value="检测人脸个数">
+    <img id="avatarPreview" src="./media/upload/2020/08/21/a4.jpg" width="500" >
+ </form>
+      </div>
+  </div>
+</body>
+
+<script src="/static/bootstrap/jquery-3.4.1.min.js"></script>
+<script>
+  $(function () {
+      bindAvatar();
+ });
+  function bindAvatar() {
+      if(window.URL.createObjectURL){
+        // alert("bindAvatar3！");
+         bindAvatar3();
+         // bindAvatar1();
+      }else if(window.FileReader){
+        alert("bindAvatar2！");
+        bindAvatar2();
+      }else {
+        alert("bindAvatar1！");
+        bindAvatar1();
+      }
+ }
+
+  /*Ajax上传至后台并返回图片的url*/
+  function bindAvatar1() {
+    $("#avatarSlect").change(function () {
+    var csrf = $("input[name='csrfmiddlewaretoken']").val();
+    var formData=new FormData();
+    formData.append("csrfmiddlewaretoken",csrf);
+    formData.append('avatar', $("#avatarSlect")[0].files[0]);  /*获取上传的图片对象*/
+    console.log("进入了bindAvatar1");
+    $.ajax({
+      url: '/upload_avatar/',
+          type: 'POST',
+          data: formData,
+          contentType: false,
+          processData: false,
+          success: function (args) {
+            console.log(args);  /*服务器端的图片地址*/
+              $("#avatarPreview").attr('src','/'+args);  /*预览图片*/
+              $("#avatar").val('/'+args);  /*将服务端的图片url赋值给form表单的隐藏input标签*/
+     }
+      })
+ })
+  }
+  /*window.FileReader本地预览*/
+ //  function bindAvatar2() {
+ //    console.log(2);
+ //       $("#avatarSlect").change(function () {
+ //           var obj=$("#avatarSlect")[0].files[0];
+ //           var fr=new FileReader();
+ //           fr.onload=function () {
+ //               $("#avatarPreview").attr('src',this.result);
+ //               console.log(this.result);
+ //               $("#avatar").val(this.result);
+ //      };
+ //      fr.readAsDataURL(obj);
+ //    })
+ // }
+ /*window.URL.createObjectURL本地预览*/
+ function bindAvatar3() {
+   console.log(3);/*在浏览器的控制台输出日志*/
+      $("#avatarSlect").change(function () {
+          var obj=$("#avatarSlect")[0].files[0];
+           console.log(obj.name);
+            console.log(obj.size);
+          var wuc=window.URL.createObjectURL(obj);
+          // var url = window.webkitURL.createObjectURL(obj);
+          console.log(wuc);
+          // console.log(url);
+          $("#avatarPreview").attr('src',wuc);
+
+           // $("#avatar").val(wuc);
+        // $("#avatarUrl").load(function () {
+        //     window.URL.revokeObjectURL(wuc);
+        // })   /*当图片加载后释放内存空间，但在jQuery3.2.1中会报错。浏览器关闭后也会自动释放*/
+
+ })}
+
+</script>
+</html>
