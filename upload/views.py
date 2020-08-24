@@ -24,9 +24,10 @@ def upload_file(request):
             print(filename)
             path = "./upload/uploadimg/"+filename
             print(path)
-            getface_dlib(path,filename)
+            face_num=getface_dlib(path,filename)
             content = {}
             content['path'] = "/media/facek/"+filename
+            content['face_num'] = face_num
             return render(request, "face.html",content)
     else:
         return render(request, "test.html")
@@ -67,3 +68,4 @@ def getface_dlib(imgpath,filename):
     cv2.imwrite('./media/facek/'+filename,img)  # 竟然必须加上一个点，不然找不到路径
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
+    return len(dets)

@@ -15,25 +15,14 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="">
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="修改了ignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/face.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/face.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/upload/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/u19900101/mysite.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1S83FIriYmASnPFi4msjsAh7zAm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -164,8 +160,16 @@
       <workItem from="1598161494641" duration="1755000" />
       <workItem from="1598163914840" duration="7974000" />
       <workItem from="1598253036250" duration="4067000" />
-      <workItem from="1598272370814" duration="1159000" />
+      <workItem from="1598272370814" duration="1659000" />
     </task>
+    <task id="LOCAL-00001" summary="修改了ignore">
+      <created>1598273645646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598273645646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +193,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改了ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了ignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598164428566">
@@ -227,14 +235,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1475" height="326" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
-    <state x="65" y="0" key="SettingsEditor" timestamp="1598156668365">
+    <state x="65" y="0" key="SettingsEditor" timestamp="1598273567792">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="65" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598156668365" />
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598272733379">
+    <state x="65" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598273567792" />
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598273651118">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598272733379" />
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598273651118" />
     <state x="157" y="0" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1598156751085">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
