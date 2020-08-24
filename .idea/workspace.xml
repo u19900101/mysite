@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="修改了ignore">
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="显示检测出人脸的数量">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/face.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/face.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/upload/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +159,7 @@
       <workItem from="1598161494641" duration="1755000" />
       <workItem from="1598163914840" duration="7974000" />
       <workItem from="1598253036250" duration="4067000" />
-      <workItem from="1598272370814" duration="1659000" />
+      <workItem from="1598272370814" duration="3964000" />
     </task>
     <task id="LOCAL-00001" summary="修改了ignore">
       <created>1598273645646</created>
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598273645646</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="显示检测出人脸的数量">
+      <created>1598275391868</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598275391868</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,53 +202,54 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改了ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了ignore" />
+    <MESSAGE value="显示检测出人脸的数量" />
+    <option name="LAST_COMMIT_MESSAGE" value="显示检测出人脸的数量" />
   </component>
   <component name="WindowStateProjectService">
     <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598164428566">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1598164428566" />
-    <state width="1475" height="338" key="GridCell.Tab.0.bottom" timestamp="1598272695845">
+    <state width="1475" height="338" key="GridCell.Tab.0.bottom" timestamp="1598277589811">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="338" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598272695845" />
-    <state width="1475" height="338" key="GridCell.Tab.0.center" timestamp="1598272695845">
+    <state width="1475" height="338" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598277589811" />
+    <state width="1475" height="338" key="GridCell.Tab.0.center" timestamp="1598277589811">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="338" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598272695845" />
-    <state width="1475" height="338" key="GridCell.Tab.0.left" timestamp="1598272695845">
+    <state width="1475" height="338" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598277589811" />
+    <state width="1475" height="338" key="GridCell.Tab.0.left" timestamp="1598277589811">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="338" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598272695845" />
-    <state width="1475" height="338" key="GridCell.Tab.0.right" timestamp="1598272695845">
+    <state width="1475" height="338" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598277589811" />
+    <state width="1475" height="338" key="GridCell.Tab.0.right" timestamp="1598277589811">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="338" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598272695845" />
-    <state width="1475" height="326" key="GridCell.Tab.1.bottom" timestamp="1598173873165">
+    <state width="1475" height="338" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598277589811" />
+    <state width="1475" height="338" key="GridCell.Tab.1.bottom" timestamp="1598277496767">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="326" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
-    <state width="1475" height="326" key="GridCell.Tab.1.center" timestamp="1598173873165">
+    <state width="1475" height="338" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598277496767" />
+    <state width="1475" height="338" key="GridCell.Tab.1.center" timestamp="1598277496767">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="326" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
-    <state width="1475" height="326" key="GridCell.Tab.1.left" timestamp="1598173873165">
+    <state width="1475" height="338" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598277496767" />
+    <state width="1475" height="338" key="GridCell.Tab.1.left" timestamp="1598277496767">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="326" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
-    <state width="1475" height="326" key="GridCell.Tab.1.right" timestamp="1598173873165">
+    <state width="1475" height="338" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598277496767" />
+    <state width="1475" height="338" key="GridCell.Tab.1.right" timestamp="1598277496767">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="326" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598173873165" />
+    <state width="1475" height="338" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598277496767" />
     <state x="65" y="0" key="SettingsEditor" timestamp="1598273567792">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="65" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598273567792" />
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598273651118">
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598275400529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598273651118" />
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598275400529" />
     <state x="157" y="0" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1598156751085">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -256,8 +263,19 @@
     </state>
     <state x="0" y="0" width="910" height="864" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1598162645510" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/upload/views.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/1_19_mysite$debug.coverage" NAME="debug Coverage Results" MODIFIED="1598272574123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1_19_mysite$debug.coverage" NAME="debug Coverage Results" MODIFIED="1598277756734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1_19_mysite$views.coverage" NAME="views Coverage Results" MODIFIED="1598164430583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />
   </component>
 </project>
