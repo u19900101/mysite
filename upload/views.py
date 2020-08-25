@@ -17,17 +17,21 @@ def upload_file(request):
             return HttpResponse("没有需要上传的文件")
         else:
             # 打开特定的文件进行二进制的写操作
-            with open("./upload/uploadimg/%s" % File.name, 'wb+') as f:
+            # 可以保存，但是无法访问到
+            name = (File.name).replace(' ', '')
+            with open("./media/upload/%s" % name, 'wb+') as f:
                 # 分块写入文件
                 for chunk in File.chunks():
                     f.write(chunk)
-            filename = File.name
-            print(filename)
-            path = "./upload/uploadimg/"+filename
+
+            path = "./media/upload/"+name
             print(path)
-            face_num,face_names=getface_dlib(path,filename)
+            # face_num,face_names=getface_dlib(path,filename)
+            pdatapath = './media/imginfo2.csv'
+            imgpath,face_names,face_num= demo(path, pdatapath)
+
             content = {}
-            content['path'] = "/media/facek/"+filename
+            content['path'] = "/media/upload/"+name
             content['face_num'] = face_num
             content['face_names'] = face_names
             return render(request, "face.html",content)
@@ -117,17 +121,17 @@ def saveface(rgb_img,faces):
         image_cnt += 1
         cv_rgb_image = np.array(image).astype(np.uint8)  # 先转换为numpy数组
         cv_bgr_image = cv2.cvtColor(cv_rgb_image, cv2.COLOR_RGB2BGR)
-        dirs = "facelib/"
+        dirs = "./media/facek/facedata/"
         faceids = os.listdir(dirs)
         # 得到最大的一个数字 +1 作为新的名称
         if len(faceids) > 0:
             newid = int(faceids[-1].split('.')[0]) + 1
         else:
             newid = 0
-        facename = dirs + str(newid).zfill(5) + '.jpg'
-        # print(facename)
+        facename = dirs+ str(newid).zfill(5) + '.jpg'
+        print(facename)
         cv2.imwrite(facename, cv_bgr_image)
-        facenames.append(facename)
+        facenames.append(facename.strip('.'))
     return facenames
 
 def checked(imgpath,pdatapath):
@@ -140,14 +144,14 @@ def checked(imgpath,pdatapath):
         facespath = temp.strip('[]').replace("'", "").split(',')
         return imgpath,facespath,int(row.values[0][2])
     else:
-        return imgpath
+        return [imgpath]
 
 def demo(imgpath, pdatapath):
     # 判断图片是否已经检测过，若检测过则直接返回已经检测到的结果
     res = checked(imgpath, pdatapath)
     if len(res) > 1:
         print("alrealy checked...")
-        return res
+        return res[0],res[1],res[2]
     img = cv2.imread(imgpath)
     # print(type(img))  //type ndarray
     # img = cv2.resize(img,(500,int(img.shape[0]/(img.shape[1])*500)))
@@ -157,7 +161,7 @@ def demo(imgpath, pdatapath):
     # 人脸分类器
     detector = dlib.get_frontal_face_detector()
     # 获取人脸检测器
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("./upload/shape_predictor_68_face_landmarks.dat")
     faces = dlib.full_object_detections()
     dets = detector(rgb_img, 1)
     print(len(dets))
@@ -182,8 +186,26 @@ def demo(imgpath, pdatapath):
     if len(dets) > 0:
         facenames = saveface(rgb_img, faces)
         print(facenames)
-
+    # 将检测后的结果写入到csv文件中去
+    with open(pdatapath, 'a+', newline='', encoding='utf-8-sig') as f:
+        writer = csv.writer(f)
+        # 写入多行用writerows
+        imgpath = imgpath.replace(' ', '')
+        writer.writerow([imgpath, facenames, len(dets)])
+    imgpath = imgpath.replace(' ', '')
     return imgpath, facenames, len(dets)
+import csv
+
+# with open(pdatapath,'a+',newline ='',encoding='utf-8-sig') as f:
+#         writer = csv.writer(f)
+#         #先写入columns_name
+#         writer.writerow(["imgpath","Faceloc","FaceNum"])
+
+def writeinfo(imgpath,pdatapath):
+    with open(pdatapath,'a+',newline ='',encoding='utf-8-sig') as f:
+        writer = csv.writer(f)
+        #写入多行用writerows
+        writer.writerow(demo(imgpath, pdatapath))
 
 
 # demo('d:/py/My_work/6_27_facebook/mtcnn-keras-master/img1/M/9.jpg', pdatapath)

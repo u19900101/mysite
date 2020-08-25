@@ -25,22 +25,6 @@
  </form>
       </div>
   </div>
-
- <input name= "f" id="ipt" type="file" onchange = "getpath()">
-<p id = "row" name = "arow"></p>
-<p> 文件的绝对路径： <span id = "filepath"></span></p>
-
-<script>
-    function getpath() {
-        alert(1);
-        var ipt = document.getElementById('ipt');
-        var row = document.getElementById('row');
-        console.log('ipt',ipt);
-        console.log('ipt.files[0]',ipt.files);
-        var filepath = document.getElementById('filepath');
-        filepath.innerHTML = ipt.files[0].path;
-    }
-</script>
 </body>
 
 <script src="/static/bootstrap/jquery-3.4.1.min.js"></script>
