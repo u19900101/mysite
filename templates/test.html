@@ -25,6 +25,22 @@
  </form>
       </div>
   </div>
+
+ <input name= "f" id="ipt" type="file" onchange = "getpath()">
+<p id = "row" name = "arow"></p>
+<p> 文件的绝对路径： <span id = "filepath"></span></p>
+
+<script>
+    function getpath() {
+        alert(1);
+        var ipt = document.getElementById('ipt');
+        var row = document.getElementById('row');
+        console.log('ipt',ipt);
+        console.log('ipt.files[0]',ipt.files);
+        var filepath = document.getElementById('filepath');
+        filepath.innerHTML = ipt.files[0].path;
+    }
+</script>
 </body>
 
 <script src="/static/bootstrap/jquery-3.4.1.min.js"></script>
@@ -84,7 +100,7 @@
  // }
  /*window.URL.createObjectURL本地预览*/
  function bindAvatar3() {
-   console.log(3);/*在浏览器的控制台输出日志*/
+      console.log(3);/*在浏览器的控制台输出日志*/
       $("#avatarSlect").change(function () {
           var obj=$("#avatarSlect")[0].files[0];
            console.log(obj.name);
@@ -92,14 +108,8 @@
           var wuc=window.URL.createObjectURL(obj);
           // var url = window.webkitURL.createObjectURL(obj);
           console.log(wuc);
-          // console.log(url);
+
           $("#avatarPreview").attr('src',wuc);
-
-           // $("#avatar").val(wuc);
-        // $("#avatarUrl").load(function () {
-        //     window.URL.revokeObjectURL(wuc);
-        // })   /*当图片加载后释放内存空间，但在jQuery3.2.1中会报错。浏览器关闭后也会自动释放*/
-
  })}
 
 </script>

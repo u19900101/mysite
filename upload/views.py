@@ -1,12 +1,11 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
+from django.http import HttpResponse
+from pandas import np
 import cv2
 import dlib
 import os
-from django.shortcuts import render
-from django.http import HttpResponse
-import dlib
-from pandas import np
-
+import pandas as pd
+import numpy as np
 
 def upload_file(request):
     # 请求方法为POST时，进行处理
@@ -22,15 +21,15 @@ def upload_file(request):
                 # 分块写入文件
                 for chunk in File.chunks():
                     f.write(chunk)
-
             filename = File.name
             print(filename)
             path = "./upload/uploadimg/"+filename
             print(path)
-            face_num=getface_dlib(path,filename)
+            face_num,face_names=getface_dlib(path,filename)
             content = {}
             content['path'] = "/media/facek/"+filename
             content['face_num'] = face_num
+            content['face_names'] = face_names
             return render(request, "face.html",content)
     else:
         return render(request, "test.html")
@@ -81,6 +80,7 @@ def getface_dlib(imgpath,filename):
     # 显示计数，按照这个计数创建窗口
     image_cnt = 0
     # 显示对齐结果
+    facenames = []
     for image in images:
         image_cnt += 1
         cv_rgb_image = np.array(image).astype(np.uint8)  # 先转换为numpy数组
@@ -100,6 +100,90 @@ def getface_dlib(imgpath,filename):
             newid = int(faceids[-1].split('.')[0]) + 1
         else:
             newid = 0
-        print(dirs + str(newid).zfill(5) + '.jpg')
-        cv2.imwrite(dirs + str(newid).zfill(5) + '.jpg', cv_bgr_image)
-    return len(dets)
+        facename = dirs + str(newid).zfill(5) + '.jpg'
+        print(facename)
+        cv2.imwrite(facename, cv_bgr_image)
+        facenames.append("/media/facek/facedata/"+str(newid).zfill(5) + '.jpg')
+    return len(dets),facenames
+
+def saveface(rgb_img,faces):
+    # 人脸对齐
+    images = dlib.get_face_chips(rgb_img, faces, size=320)
+    # 显示计数，按照这个计数创建窗口
+    image_cnt = 0
+    # 显示对齐结果
+    facenames = []
+    for image in images:
+        image_cnt += 1
+        cv_rgb_image = np.array(image).astype(np.uint8)  # 先转换为numpy数组
+        cv_bgr_image = cv2.cvtColor(cv_rgb_image, cv2.COLOR_RGB2BGR)
+        dirs = "facelib/"
+        faceids = os.listdir(dirs)
+        # 得到最大的一个数字 +1 作为新的名称
+        if len(faceids) > 0:
+            newid = int(faceids[-1].split('.')[0]) + 1
+        else:
+            newid = 0
+        facename = dirs + str(newid).zfill(5) + '.jpg'
+        # print(facename)
+        cv2.imwrite(facename, cv_bgr_image)
+        facenames.append(facename)
+    return facenames
+
+def checked(imgpath,pdatapath):
+    df=pd.read_csv(pdatapath,header=None,sep=',')
+    if imgpath in df[0].values: #df[0]表示第一列imgpath的所有值
+        # 得到对应path的那一行值
+        row = df[df[0].isin([imgpath])]
+        temp = row.values[0][1] #得到 "['facelib/00054.jpg', 'facelib/00055.jpg']"
+        # 对字符串进行处理
+        facespath = temp.strip('[]').replace("'", "").split(',')
+        return imgpath,facespath,int(row.values[0][2])
+    else:
+        return imgpath
+
+def demo(imgpath, pdatapath):
+    # 判断图片是否已经检测过，若检测过则直接返回已经检测到的结果
+    res = checked(imgpath, pdatapath)
+    if len(res) > 1:
+        print("alrealy checked...")
+        return res
+    img = cv2.imread(imgpath)
+    # print(type(img))  //type ndarray
+    # img = cv2.resize(img,(500,int(img.shape[0]/(img.shape[1])*500)))
+
+    # 彩色图像识别效果更强一些
+    rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    # 人脸分类器
+    detector = dlib.get_frontal_face_detector()
+    # 获取人脸检测器
+    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    faces = dlib.full_object_detections()
+    dets = detector(rgb_img, 1)
+    print(len(dets))
+
+    for face in dets:
+        shape = predictor(img, face)  # 寻找人脸的68个标定点
+        k = shape.parts()
+        # print(k[36,0])
+        # 遍历所有点，打印出其坐标，并圈出来
+        for pt in shape.parts():
+            pt_pos = (pt.x, pt.y)
+            cv2.circle(img, pt_pos, 1, (0, 255, 0), 1)
+            left = face.left()
+            top = face.top()
+            right = face.right()
+            bottom = face.bottom()
+            cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 1)
+        # img = cv2.resize(img,(600,int(img.shape[0]/(img.shape[1])*600)))
+        faces.append(predictor(rgb_img, face))
+        # 绘制矩形框  在图片中标注人脸，并显示
+    facenames = []
+    if len(dets) > 0:
+        facenames = saveface(rgb_img, faces)
+        print(facenames)
+
+    return imgpath, facenames, len(dets)
+
+
+# demo('d:/py/My_work/6_27_facebook/mtcnn-keras-master/img1/M/9.jpg', pdatapath)

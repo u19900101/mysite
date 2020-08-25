@@ -5,8 +5,23 @@
     <title>face</title>
 </head>
 <body>
-<img id="avatarPreview" src={{ path }} width="500" >
-<h1>人脸数量为： {{ face_num }}</h1>
+
+
+
+<div style="width:auto; height:auto; float:left; display:inline">
+     <h1>人脸数量为： {{ face_num }}</h1>
+    <img id="avatarPreview" src={{ path }} width="500" >
+</div>
+
+<div style="width:auto; height:auto; float:left; display:inline;position: absolute;top:100px;">
+     {% for facename in face_names %}
+        <div style="width:30px; height:auto; float:left; display:inline;">
+<!--             <h3>{{ facename }}</h3>-->
+            <img id={{ facename }} src={{ facename }} width="30" >
+        </div>
+
+     {% endfor %}
+</div>
 
 </body>
 </html>
