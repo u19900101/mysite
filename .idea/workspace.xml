@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="本来想添加去重的代码，但无法实现">
+    <list default="true" id="0763c9e9-fc43-4c27-83d2-83378080c4b1" name="Default Changelist" comment="实现了简易版的去重，按上传的文件名称来进行去重">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/face.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/face.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/upload/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,24 +60,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/knownface" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\py\My_work\1-19-mysite\media" />
-      <recent name="D:\py\My_work\1-19-mysite\upload" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\likes" />
-      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\comment\templatetags" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\py\My_work\1-19-mysite\media" />
       <recent name="D:\py\My_work\1-19-mysite\upload" />
       <recent name="D:\py\My_work\1-19-mysite" />
       <recent name="D:\py\My_work\1-19-mysite\templates" />
       <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\blog\static\blog" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\py\My_work\1-19-mysite\media\knownface" />
+      <recent name="D:\py\My_work\1-19-mysite\media" />
+      <recent name="D:\py\My_work\1-19-mysite\upload" />
+      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite" />
+      <recent name="D:\py\4.0-cloud\code\10.12_blog\mysite_env\mysite\likes" />
     </key>
   </component>
   <component name="RunManager" selected="Python.debug">
@@ -162,7 +162,8 @@
       <workItem from="1598253036250" duration="4067000" />
       <workItem from="1598272370814" duration="10412000" />
       <workItem from="1598314197720" duration="6723000" />
-      <workItem from="1598358616596" duration="9518000" />
+      <workItem from="1598358616596" duration="9670000" />
+      <workItem from="1598400500303" duration="13896000" />
     </task>
     <task id="LOCAL-00001" summary="修改了ignore">
       <created>1598273645646</created>
@@ -192,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598365223015</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="实现了简易版的去重，按上传的文件名称来进行去重">
+      <created>1598370952168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598370952168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,57 +230,58 @@
     <MESSAGE value="显示检测出人脸的数量" />
     <MESSAGE value="将人脸截取保存到文件夹中" />
     <MESSAGE value="本来想添加去重的代码，但无法实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="本来想添加去重的代码，但无法实现" />
+    <MESSAGE value="实现了简易版的去重，按上传的文件名称来进行去重" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了简易版的去重，按上传的文件名称来进行去重" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598164428566">
+    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598400622986">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1598164428566" />
+    <state x="215" y="58" width="1155" height="781" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1598400622986" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1598280873114">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1598280873114" />
-    <state width="1475" height="150" key="GridCell.Tab.0.bottom" timestamp="1598370404189">
+    <state width="1475" height="215" key="GridCell.Tab.0.bottom" timestamp="1598418053962">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="150" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598370404189" />
-    <state width="1475" height="150" key="GridCell.Tab.0.center" timestamp="1598370404189">
+    <state width="1475" height="215" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598418053962" />
+    <state width="1475" height="215" key="GridCell.Tab.0.center" timestamp="1598418053962">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="150" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598370404189" />
-    <state width="1475" height="150" key="GridCell.Tab.0.left" timestamp="1598370404189">
+    <state width="1475" height="215" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598418053962" />
+    <state width="1475" height="215" key="GridCell.Tab.0.left" timestamp="1598418053962">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="150" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598370404189" />
-    <state width="1475" height="150" key="GridCell.Tab.0.right" timestamp="1598370404189">
+    <state width="1475" height="215" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598418053962" />
+    <state width="1475" height="215" key="GridCell.Tab.0.right" timestamp="1598418053962">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="150" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598370404189" />
-    <state width="1475" height="191" key="GridCell.Tab.1.bottom" timestamp="1598370067629">
+    <state width="1475" height="215" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598418053962" />
+    <state width="1475" height="142" key="GridCell.Tab.1.bottom" timestamp="1598417982184">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="191" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598370067629" />
-    <state width="1475" height="191" key="GridCell.Tab.1.center" timestamp="1598370067629">
+    <state width="1475" height="142" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598417982184" />
+    <state width="1475" height="142" key="GridCell.Tab.1.center" timestamp="1598417982184">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="191" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598370067629" />
-    <state width="1475" height="191" key="GridCell.Tab.1.left" timestamp="1598370067629">
+    <state width="1475" height="142" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598417982184" />
+    <state width="1475" height="142" key="GridCell.Tab.1.left" timestamp="1598417982184">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="191" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598370067629" />
-    <state width="1475" height="191" key="GridCell.Tab.1.right" timestamp="1598370067629">
+    <state width="1475" height="142" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598417982184" />
+    <state width="1475" height="142" key="GridCell.Tab.1.right" timestamp="1598417982184">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1475" height="191" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598370067629" />
+    <state width="1475" height="142" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598417982184" />
     <state x="65" y="0" key="SettingsEditor" timestamp="1598273567792">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="65" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1598273567792" />
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598365233262">
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2" timestamp="1598370956518">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598365233262" />
+    <state x="161" y="35" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1598370956518" />
     <state x="157" y="0" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1598156751085">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -281,6 +290,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="408" y="302" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1598273299446" />
+    <state x="143" y="0" key="editAsTableFormatDialogDimension" timestamp="1598418084859">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="143" y="0" key="editAsTableFormatDialogDimension/0.0.1536.864@0.0.1536.864" timestamp="1598418084859" />
     <state x="0" y="0" width="910" height="864" key="find.popup" timestamp="1598162645510">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -291,19 +304,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/upload/views.py</url>
-          <line>99</line>
+          <line>113</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/upload/views.py</url>
-          <line>193</line>
-          <option name="timeStamp" value="3" />
+          <line>148</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/1_19_mysite$debug.coverage" NAME="debug Coverage Results" MODIFIED="1598370404179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1_19_mysite$debug.coverage" NAME="debug Coverage Results" MODIFIED="1598418053950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1_19_mysite$views.coverage" NAME="views Coverage Results" MODIFIED="1598164430583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />
   </component>
 </project>

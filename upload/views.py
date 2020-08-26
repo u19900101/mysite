@@ -28,12 +28,26 @@ def upload_file(request):
             print(path)
             # face_num,face_names=getface_dlib(path,filename)
             pdatapath = './media/imginfo2.csv'
-            imgpath,face_names,face_num= demo(path, pdatapath)
-
+            imgpath,face_paths,face_names,face_num= demo(path, pdatapath,name)
+            print("测试facename:",face_names)
             content = {}
-            content['path'] = "/media/upload/"+name
+            # 供显示使用
+
             content['face_num'] = face_num
+            content['face_paths'] = face_paths
             content['face_names'] = face_names
+
+            content['path'] = "/media/facek/" + name
+            res = []
+
+            for i in range(len(face_names)):
+                temp = {}
+                temp['path'] = face_paths[i]
+                temp['name'] =face_names[i]
+                res.append(temp)
+
+            content['face_pathsAndnames'] = res
+
             return render(request, "face.html",content)
     else:
         return render(request, "test.html")
@@ -116,6 +130,7 @@ def saveface(rgb_img,faces):
     # 显示计数，按照这个计数创建窗口
     image_cnt = 0
     # 显示对齐结果
+    facepaths = []
     facenames = []
     for image in images:
         image_cnt += 1
@@ -128,11 +143,12 @@ def saveface(rgb_img,faces):
             newid = int(faceids[-1].split('.')[0]) + 1
         else:
             newid = 0
-        facename = dirs+ str(newid).zfill(5) + '.jpg'
-        print(facename)
-        cv2.imwrite(facename, cv_bgr_image)
-        facenames.append(facename.strip('.'))
-    return facenames
+        facepath = dirs+ str(newid).zfill(5) + '.jpg'
+        print(facepath)
+        cv2.imwrite(facepath, cv_bgr_image)
+        facenames.append(facereg(cv_bgr_image)[0])
+        facepaths.append(facepath.strip('.'))
+    return facepaths,facenames
 
 def checked(imgpath,pdatapath):
     df=pd.read_csv(pdatapath,header=None,sep=',')
@@ -142,20 +158,24 @@ def checked(imgpath,pdatapath):
         temp = row.values[0][1] #得到 "['facelib/00054.jpg', 'facelib/00055.jpg']"
         # 对字符串进行处理
         facespath = temp.strip('[]').replace("'", "").split(',')
-        return imgpath,facespath,int(row.values[0][2])
+        temp = row.values[0][2]
+        facenames = temp.split(',')
+        facenamesN = []
+        for name in facenames:
+            facenamesN.append(name.replace("'", "").replace(" ", "").strip('[]'))
+        return imgpath,facespath,facenamesN,int(row.values[0][3])
     else:
         return [imgpath]
 
-def demo(imgpath, pdatapath):
+def demo(imgpath, pdatapath,name):
     # 判断图片是否已经检测过，若检测过则直接返回已经检测到的结果
     res = checked(imgpath, pdatapath)
     if len(res) > 1:
         print("alrealy checked...")
-        return res[0],res[1],res[2]
+        return res[0],res[1],res[2],res[3]
     img = cv2.imread(imgpath)
     # print(type(img))  //type ndarray
-    # img = cv2.resize(img,(500,int(img.shape[0]/(img.shape[1])*500)))
-
+    img = cv2.resize(img, (1600, int(img.shape[0] / (img.shape[1]) * 1600)))
     # 彩色图像识别效果更强一些
     rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     # 人脸分类器
@@ -173,28 +193,59 @@ def demo(imgpath, pdatapath):
         # 遍历所有点，打印出其坐标，并圈出来
         for pt in shape.parts():
             pt_pos = (pt.x, pt.y)
-            cv2.circle(img, pt_pos, 1, (0, 255, 0), 1)
+            cv2.circle(img, pt_pos, 3, (0, 255, 0), 1)
             left = face.left()
             top = face.top()
             right = face.right()
             bottom = face.bottom()
-            cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 1)
-        # img = cv2.resize(img,(600,int(img.shape[0]/(img.shape[1])*600)))
+            cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 3)
+
         faces.append(predictor(rgb_img, face))
         # 绘制矩形框  在图片中标注人脸，并显示
+
+    cv2.imwrite('./media/facek/'+name,img)  # 竟然必须加上一个点，不然找不到路径
     facenames = []
+    facepaths = []
     if len(dets) > 0:
-        facenames = saveface(rgb_img, faces)
+        facepaths,facenames = saveface(rgb_img, faces)
         print(facenames)
     # 将检测后的结果写入到csv文件中去
     with open(pdatapath, 'a+', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
         # 写入多行用writerows
         imgpath = imgpath.replace(' ', '')
-        writer.writerow([imgpath, facenames, len(dets)])
+        writer.writerow([imgpath, facepaths,facenames, len(dets)])
     imgpath = imgpath.replace(' ', '')
-    return imgpath, facenames, len(dets)
+    return imgpath, facepaths,facenames, len(dets)
 import csv
+# 人脸识别
+import face_recognition
+def facereg(faceimg):
+    # 读取文件
+    f = open('./media/known_face_names.txt', 'r')
+    known_face_names = eval(str(f.readlines()[0]))
+    print(known_face_names[0])
+    f.close()
+    known_face_encodings = np.loadtxt('./media/known_face_encodings.txt', delimiter=',')
+    print(known_face_encodings.shape)
+
+    face_names = []
+    # 批量编码
+    face_encodings = face_recognition.face_encodings(faceimg)
+    for face_encoding in face_encodings:
+        # 取出一张脸并与数据库中所有的人脸进行对比，计算得分
+        matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance=0.4)
+        name = "Unknown"
+        # 找出距离最近的人脸
+        face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+        # 取出这个最近人脸的评分
+        best_match_index = np.argmin(face_distances)
+        if matches[best_match_index]:
+            name = known_face_names[best_match_index]
+        face_names.append(name)
+    print("已处理：  有人脸", face_names)
+    return face_names
+
 
 # with open(pdatapath,'a+',newline ='',encoding='utf-8-sig') as f:
 #         writer = csv.writer(f)
