@@ -9,7 +9,7 @@ django-ckeditor==5.7.1
 django-js-asset==1.2.2
 fake-useragent==0.1.11
 idna==2.8
-lxml==4.4.2
+lxml==4.6.5
 mysqlclient==1.4.6
 parse==1.14.0
 pyee==6.0.0
